@@ -76,7 +76,7 @@ function init() {
 
 	let renderer = new THREE.WebGLRenderer({
 		antialias: true,
-		multiviewStereo: true,
+		multiviewStereo: false,
 		// precision: "mediump",
 	});
 	renderer.setPixelRatio(window.devicePixelRatio);
