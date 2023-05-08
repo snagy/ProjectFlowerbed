@@ -368,26 +368,26 @@ export class SceneCreationSystem extends System {
 				propEntity.addComponent(EnvironmentProp);
 
 				// make all the benches & fences instanced meshes
-				if (node.userData.link.match(/Bench/i)) {
-					propEntity.addComponent(InstancedMeshInstanceComponent, {
-						meshId: node.userData.link,
-					});
-				}
-				if (node.userData.link.match(/Fence/i)) {
-					propEntity.addComponent(InstancedMeshInstanceComponent, {
-						meshId: node.userData.link,
-					});
-				}
-				if (node.userData.link.match(/Bridge/i)) {
-					propEntity.addComponent(InstancedMeshInstanceComponent, {
-						meshId: node.userData.link,
-					});
-				}
-				if (node.userData.link.match(/planter/i)) {
-					propEntity.addComponent(InstancedMeshInstanceComponent, {
-						meshId: node.userData.link,
-					});
-				}
+				// if (node.userData.link.match(/Bench/i)) {
+				// 	propEntity.addComponent(InstancedMeshInstanceComponent, {
+				// 		meshId: node.userData.link,
+				// 	});
+				// }
+				// if (node.userData.link.match(/Fence/i)) {
+				// 	propEntity.addComponent(InstancedMeshInstanceComponent, {
+				// 		meshId: node.userData.link,
+				// 	});
+				// }
+				// if (node.userData.link.match(/Bridge/i)) {
+				// 	propEntity.addComponent(InstancedMeshInstanceComponent, {
+				// 		meshId: node.userData.link,
+				// 	});
+				// }
+				// if (node.userData.link.match(/planter/i)) {
+				// 	propEntity.addComponent(InstancedMeshInstanceComponent, {
+				// 		meshId: node.userData.link,
+				// 	});
+				// }
 			}
 		});
 	}

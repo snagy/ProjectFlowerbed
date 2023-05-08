@@ -103,16 +103,16 @@ const createInstancedMeshesMap = (model) => {
 		}
 		if (node.isMesh && node.visible) nodes.push(node);
 	});
-	for (let node of nodes) {
-		total += 1;
-		// The instanced objects are named in the format of <instName>__xxx
-		let instName = node.name.split('__')[0];
-		if (objects[instName]) {
-			objects[instName] += 1;
-		} else {
-			objects[instName] = 1;
-		}
-	}
+	// for (let node of nodes) {
+	// 	total += 1;
+	// 	// The instanced objects are named in the format of <instName>__xxx
+	// 	let instName = node.name.split('__')[0];
+	// 	if (objects[instName]) {
+	// 		objects[instName] += 1;
+	// 	} else {
+	// 		objects[instName] = 1;
+	// 	}
+	// }
 	let instancedMeshes = {};
 	for (let instName in objects) {
 		if (objects[instName] > 1) {
