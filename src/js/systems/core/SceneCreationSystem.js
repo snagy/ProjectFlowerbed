@@ -39,9 +39,9 @@ import { updateMatrixRecursively } from '../../utils/object3dUtils';
 
 const USE_CHEAP_MATERIAL = false;
 const IGNORE_MATERIAL_TEXTURES = false;
-const IGNORE_METAL_ROUGHNESS = true;
+const IGNORE_METAL_ROUGHNESS = false;
 const IGNORE_NORMALS = false;
-const IGNORE_ENVMAPS = true;
+const IGNORE_ENVMAPS = false;
 const OPTIMIZE_MODEL = true;
 const cubeLoader = new THREE.CubeTextureLoader();
 

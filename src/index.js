@@ -74,15 +74,19 @@ function init() {
 
 	global_scene = scene;
 
+	const urlParams = new URLSearchParams(window.location.search);
+	const suppressMultiview = urlParams.get('noMultiview');
+
 	let renderer = new THREE.WebGLRenderer({
 		antialias: true,
-		multiviewStereo: false,
+		multiviewStereo: !suppressMultiview,
 		// precision: "mediump",
 	});
 	renderer.setPixelRatio(window.devicePixelRatio);
 	renderer.setSize(container.offsetWidth, container.offsetHeight);
 	renderer.outputEncoding = THREE.sRGBEncoding;
 	renderer.xr.enabled = true;
+	renderer.xr.setFramebufferScaleFactor(0.25);
 	const xrCamera = renderer.xr.getCamera();
 	xrCamera.matrixAutoUpdate = true;
 	xrCamera.layers.enable(THREEJS_LAYERS.VIEWER_ONLY);
